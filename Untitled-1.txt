@@ -1,0 +1,22 @@
+def areSame(a,b):
+        if (len(a) > len(b)):
+            a,b=b,a
+
+        sameElement=[]
+        for i in range (len(b)):
+            for j in range (len(a)):
+                if (i==j):
+                    sameElement.append(i)
+                    return sameElement
+                    
+        
+def isSubsequence(s, t):
+        container=[]
+        sameChar=areSame(s,t)
+        container.append(sameChar)
+        if (len(container)==len(s)):
+            return areSame(container,s)
+        print (sameChar)
+        return False
+        
+isSubsequence(['a','b','c'],['a','f','g','b','f','e','c'])
